@@ -43,7 +43,7 @@ const MovieCard = (props) =>{
                     </div>
                         <button onClick={() =>{
                             handleRemove(id)
-                        }} style={{ float: 'right', width: '58%', marginRight: '0px' }} > remove </button>
+                        }} > remove </button>
                 </div>
             </div>
         </div>

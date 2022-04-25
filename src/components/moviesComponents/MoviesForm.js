@@ -34,7 +34,7 @@ const MoviesForm = (props) =>{
     }
 
     return (
-        <div style={{width:'22%',display:'inline-block',float: 'right',position:'fixed',right:25}} className="border p-3 shadow-lg rounded" >
+        <div className="border p-3 shadow-lg rounded" >
             <h2> Add Movie </h2>
 
             <form onSubmit={handleSubmit} >
