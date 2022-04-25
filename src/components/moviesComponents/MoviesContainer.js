@@ -7,7 +7,9 @@ const MoviesContainer = (props) =>{
 
     
     return (
-        <div>
+        <div className='container'>
+            <h2> My Big Movie List </h2> <br />
+            
             <MovieList />
                 
             <MoviesForm />

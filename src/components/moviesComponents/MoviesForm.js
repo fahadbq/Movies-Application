@@ -34,7 +34,7 @@ const MoviesForm = (props) =>{
     }
 
     return (
-        <div className="border p-3 shadow-lg rounded" >
+        <div className="shadow p-3 mb-5 bg-body rounded" style={{position: "fixed", right: "150px", top: "100px", width: "300px" }} >
             <h2> Add Movie </h2>
 
             <form onSubmit={handleSubmit} >
@@ -44,7 +44,7 @@ const MoviesForm = (props) =>{
                     value={movieName} 
                     onChange={handleChage} 
                     name='movieName'
-                    className='form-control-sm'
+                    className='form-control'
                 /> <br />
 
                 <input type='text'
@@ -52,10 +52,10 @@ const MoviesForm = (props) =>{
                     value={ranking}
                     onChange={handleChage}
                     name='ranking'
-                    className='form-control-sm'
+                    className='form-control'
                 /> <br />
 
-                <input type='submit' value='Add' className='btn btn-primary btn-sm' />
+                <input type='submit' value='Add' className='btn btn-primary' />
 
             </form>
         </div>

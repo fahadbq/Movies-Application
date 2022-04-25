@@ -56,18 +56,18 @@ const Search = (props) =>{
     }
 
     return (
-        <div className="row col-12">
+        <div className="row col-12" style={{width: "600px"}}>
             <form className="input-group input-group-sm mb-3" aria-label="Text input with dropdown button" > 
 
                 <input type='text' 
-                    placeholder='search by movie/ranking' 
+                    placeholder='Search by Movie/Ranking' 
                     value={ search } 
                     onChange={ handleChange } 
                     name='search'
                     className='form-control'
                 />
                 
-                <div className="row col-2">
+                <div className="row col-3">
                     <select value={orderBy} 
                             onChange={ handleChange }
                             name='orderBy'

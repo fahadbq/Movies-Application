@@ -15,8 +15,7 @@ const MovieList = (props) =>{
     }, [moviesData])
 
     return (
-        <div>
-            <h2> My Big Movie List </h2> <br />
+        <div className='container border' style={{ position: 'fixed', width: "940px" }}>
 
             < Search setCloneData={setCloneData} originalData={moviesData} />
 

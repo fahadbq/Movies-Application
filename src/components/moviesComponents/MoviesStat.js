@@ -12,12 +12,14 @@ const MoviesStat = (props) =>{
     console.log(top3)
 
     return (
-        <div className="border p-3 shadow-lg rounded" >
-            <h2> Movies Stat </h2>
+        <div className="border shadow p-3 mb-5 bg-body rounded" style={{ position: "fixed", width: "300px", right: "150px", bottom: "50px"}} >
+            <h3> Movies Stat </h3>
 
-            <h3> Total Movies - {movies.length} </h3>
+            <h4> Total Movies - {movies.length} </h4>
 
-            <h4> # Top Ranked Movies - { top3.map( ele => { return <p key={ele.id} > {ele.movie} </p> }) }  </h4>
+            <h5> # Top Ranked Movies </h5>
+
+            { top3.map( ele => { return <p key={ele.id} > - {ele.movie} </p> }) }
   
         </div>
     )
