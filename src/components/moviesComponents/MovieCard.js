@@ -26,7 +26,7 @@ const MovieCard = (props) =>{
     }
 
     return (
-        <div className='border' >
+        <div className='border' style={{width: "180px"}} >
             {/* <div className="col">
                 <div class="card">
                     <form > 
@@ -50,20 +50,33 @@ const MovieCard = (props) =>{
             </div> */}
                         
                         {/* card */}
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                        {/* <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
-                        <div className="card-group" style={{width: "14rem"}}>
+                        <div className="card-group" style={{width: "11rem"}}>
                         <img src={pic3} className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title"> Name: { movie } </h5>
                             <p className="card-text"> Ranking: { ranking } </p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                            <a href="#" className="btn btn-primary">Go somewhere</a> 
                         </div>
                         </div>
                         </div>
-                        </div>
+                        </div> */}
+
+                        <div className="card mt-2 p-2 bd-highlight border shadow rounded" style={{ width: '16rem' }} >
+                                   <img className="card-img-left pt-2" src={pic3} alt='img'/>
+                                    <div className="card-body">
+                                        <h4 className="card-title">Name : { movie }</h4>
+                                        <h5 className="card-title">Ranking : #{ ranking}</h5>
+                                        <button onClick={()=>{handleRemove(id)}} style={{border:'none',background:'none', display:'inline-block', float: 'right'}}><img src='https://www.pngall.com/wp-content/uploads/5/Delete-Bin-Trash-PNG-Clipart.png' alt='delete' style={{width:'2rem'}}/></button>
+                                    </div>
+                            </div>
+                        
+                        
         </div>
     )
 }
 
 export default MovieCard
+
+//make changes to row and make it look clean 

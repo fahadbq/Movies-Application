@@ -7,7 +7,7 @@ const MoviesContainer = (props) =>{
 
     
     return (
-        <div className='container'>
+        <div className='container' style={{position: "fixed"}}>
             <h2> My Big Movie List </h2> <br />
             
             <MovieList />
