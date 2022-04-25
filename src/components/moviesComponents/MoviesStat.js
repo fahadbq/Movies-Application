@@ -12,7 +12,7 @@ const MoviesStat = (props) =>{
     console.log(top3)
 
     return (
-        <div style={{width:'22%',display:'inline-block',float: 'right',position:'fixed', bottom:45, right:25}} className="border p-3 shadow-lg rounded" >
+        <div className="border p-3 shadow-lg rounded" >
             <h2> Movies Stat </h2>
 
             <h3> Total Movies - {movies.length} </h3>
