@@ -17,7 +17,7 @@ const MoviesStat = (props) =>{
         <div className="border shadow p-3 mb-5 bg-body rounded" style={{ position: "fixed", width: "300px", right: "150px", bottom: "70px"}} >
 
             { movies.length === 0 ? 
-                (<h3 style={{fontFamily: "monospace"}} > No data found, add movies to show top movies. </h3>
+                (<h3 style={{fontFamily: "monospace", color: "#37475A" }} > No data found, add movies to show top movies. </h3>
                 ) : (
                 <div>
                     <h5> Top {movies.length} Ranked Movies </h5>
@@ -33,9 +33,9 @@ const MoviesStat = (props) =>{
                         <tbody>
                             { top3.map( (ele, i) => { 
                                 return <tr key={ele.id} > 
-                                    <td> { i + 1 } </td> 
+                                    <td> { i + 1 }. </td> 
                                     <td> <small> {ele.movie} </small> </td>
-                                    <td> <BsFillStarFill color="orange" > </BsFillStarFill> {ele.ranking}  </td>
+                                    <td> <BsFillStarFill color="orange" > </BsFillStarFill> {ele.ranking} </td>
                                 </tr> }) 
                             }
                         </tbody>

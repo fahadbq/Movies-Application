@@ -65,6 +65,7 @@ const Search = (props) =>{
                     onChange={ handleChange } 
                     name='search'
                     className='form-control'
+                    style={{backgroundColor: "#f2f2f4" }}
                 />
                 
                 <div className="row col-3">

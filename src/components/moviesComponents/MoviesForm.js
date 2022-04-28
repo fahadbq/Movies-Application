@@ -2,12 +2,18 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addFormData } from '../../reduxFiles/actions/moviesAction'
 
+import doctorStrangeImage from '../../Assets/doctor-strange.webp'
+import spiderMan from '../../Assets/Spider-man.jpg'
+
 const MoviesForm = (props) =>{
 
     const dispatch = useDispatch()
 
     const [ movieName, setMovieName ] = useState('')
     const [ ranking, setRanking ] = useState ('')
+
+    //Movies Posters
+    const posters = [ doctorStrangeImage, spiderMan]
 
     const handleChage =(e) =>{
         const readInput = e.target.name
@@ -24,7 +30,7 @@ const MoviesForm = (props) =>{
         const formData = {
             id: Number(new Date()),
             movie : movieName,
-            ranking: Number(ranking)
+            ranking: Number(ranking),
         }
 
         dispatch(addFormData(formData))
@@ -34,7 +40,7 @@ const MoviesForm = (props) =>{
     }
 
     return (
-        <div className="shadow p-3 mb-5 bg-body rounded" style={{position: "fixed", right: "150px", top: "100px", width: "300px" }} >
+        <div className="shadow p-3 mb-5 bg-body rounded-lg" style={{position: "fixed", right: "150px", top: "100px", width: "300px", backgroundColor: "#232F3E" }} >
             <h2> Add Movie </h2>
 
             <form onSubmit={handleSubmit} >
@@ -55,7 +61,7 @@ const MoviesForm = (props) =>{
                     className='form-control'
                 /> <br />
 
-                <input type='submit' value='Add' className='btn btn-primary' />
+                <input type='submit' value='Add' className='btn btn-success' />
 
             </form>
         </div>

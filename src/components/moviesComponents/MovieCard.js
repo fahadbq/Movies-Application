@@ -1,36 +1,48 @@
 import { useDispatch } from 'react-redux'
 import { removeMovie } from '../../reduxFiles/actions/moviesAction'
 
-import doctorStrangeImage from '../../Assets/doctor-strange.webp'
-import spiderMan from '../../Assets/Spider-man.jpg'
+import swal from 'sweetalert';
 import { MdDelete } from "react-icons/md";
+import doctorStrangeImage from '../../Assets/doctor-strange.webp'
+//import spiderMan from '../../Assets/Spider-man.jpg'
 
 const MovieCard = (props) => {
 
     const dispatch = useDispatch()
     
-    const { id, movie, ranking, poster } = props
-    console.log(poster)
+    const { id, movie, ranking } = props
 
     const handleRemove= (id) =>{
 
-        const confirm = window.confirm('Are you sure you want to delete this ?')
-            if(confirm){
-                dispatch(removeMovie(id))
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this movie!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Poof! Your movie has been deleted!", {
+                icon: "success",
+              });
+              dispatch(removeMovie(id))
+            } else {
+              swal("Your movie is safe!");
             }
+          });
     }
 
-    const posters = [ doctorStrangeImage, spiderMan]
 
     return (
-        <div className="card-group" style={{width: "14rem", height: "400px"}} >
+        <div className="card-group" style={{width: "15rem", height: "400px" }} >
             <div className='card'>
-            <img src={ spiderMan } className="card-img-top" alt="Movies poster" />
-            <div className="card-body">
-                <small className="card-title"> Name: { movie } </small>
-                <small className="card-text"> Ranking: #{ ranking } </small>
+            <img src={doctorStrangeImage} className="card-img-top" alt="Movies poster" />
+            <div className="card-body" style={{ backgroundColor: "#232F3E" }} >
+                <h6 className="card-title" style={{color: "#f2f2f4"}} > Name: { movie } </h6>
+                <div className="card-text" style={{color: "#f2f2f4"}} > <small> Ranking: { ranking } </small> </div>
                 <button onClick={()=>{handleRemove(id)}}
-                    style={{border:'none',background:'none', display:'inline-block', float: 'right'}}> <MdDelete size="1.5em" /> </button>
+                    style={{border:'none',background:'none', display:'inline-block', float: 'right'}}> <MdDelete size="1.5em" color="#f2f2f4" /> </button>
             </div>
             </div>
         </div>
