@@ -21,7 +21,8 @@ const MovieCard = (props) =>{
     }
 
     return (
-
+        <div className="border container row">
+            <div className='col-4'>
         <div className="card-group mt-3 border shadow rounded" style={{ width: '12rem' }} >
                     <img className="card-img-top" src={doctorStrangeImage} alt='img'/>
                     <div className="card-body">
@@ -30,6 +31,8 @@ const MovieCard = (props) =>{
                         <button onClick={()=>{handleRemove(id)}} style={{border:'none',background:'none', display:'inline-block', float: 'right'}}> <MdDelete size="1.5em" /> </button>
                     </div>
             </div>
+            </div>
+        </div>
     )
 }
 

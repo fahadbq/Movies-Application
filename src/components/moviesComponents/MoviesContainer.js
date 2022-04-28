@@ -9,9 +9,9 @@ const MoviesContainer = (props) =>{
     
     return (
         
-        <div className='container' style={{ position: 'fixed', width: "1000px", left: "50px" }}>
+        <div className='container border' style={{ position: 'fixed', width: "1000px", left: "50px", top: "10px" }}>
 
-            <h2 style={{fontFamily:"monospace"}}> My Big Movie List </h2> <br />
+            <h2 style={{fontFamily:"monospace"}}> Movie Rating list </h2> <br />
             
             <MovieList />
                 

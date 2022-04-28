@@ -15,7 +15,7 @@ const MovieList = (props) =>{
     }, [moviesData])
 
     return (
-        <div className='container rounded-top' style={{ position: 'fixed', width: "1000px", left: "50px" }}>
+        <div className='container'>
 
             < Search setCloneData={setCloneData} originalData={moviesData} />
 
