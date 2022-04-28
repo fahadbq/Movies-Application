@@ -15,15 +15,16 @@ const MovieList = (props) =>{
     }, [moviesData])
 
     return (
-        <div className='container'>
+        <div className="container row pt-2" >
 
             < Search setCloneData={setCloneData} originalData={moviesData} />
 
             { cloneData.map((ele) =>{
-                return  <MovieCard key={ele.id}
-                    { ...ele}
+                return <MovieCard key={ele.id}
+                { ...ele}
                 />
-            }) }
+            })
+            }
             
         </div>
     )
