@@ -4,11 +4,14 @@ import MoviesStat from './MoviesStat'
 import MovieList from './MoviesList'
 
 const MoviesContainer = (props) =>{
-
+    
+    
     
     return (
-        <div className='container' style={{position: "fixed"}}>
-            <h2> My Big Movie List </h2> <br />
+        
+        <div className='container' style={{ position: 'fixed', width: "1000px", left: "50px" }}>
+
+            <h2 style={{fontFamily:"monospace"}}> My Big Movie List </h2> <br />
             
             <MovieList />
                 

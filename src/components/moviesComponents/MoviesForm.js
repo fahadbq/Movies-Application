@@ -48,7 +48,7 @@ const MoviesForm = (props) =>{
                 /> <br />
 
                 <input type='text'
-                    placeholder='IMDb Ranking'
+                    placeholder='Enter IMDb rating'
                     value={ranking}
                     onChange={handleChage}
                     name='ranking'

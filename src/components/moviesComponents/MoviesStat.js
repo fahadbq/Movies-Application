@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
+import { BsFillStarFill } from "react-icons/bs";
+
 const MoviesStat = (props) =>{
 
     const movies = useSelector((state) =>{
@@ -12,14 +14,33 @@ const MoviesStat = (props) =>{
     console.log(top3)
 
     return (
-        <div className="border shadow p-3 mb-5 bg-body rounded" style={{ position: "fixed", width: "300px", right: "150px", bottom: "50px"}} >
-            <h3> Movies Stat </h3>
+        <div className="border shadow p-3 mb-5 bg-body rounded" style={{ position: "fixed", width: "300px", right: "150px", bottom: "70px"}} >
 
-            <h4> Total Movies - {movies.length} </h4>
+            { movies.length === 0 ? 
+                (<h3 style={{fontFamily: "monospace"}} > No data found, add movies to show top movies. </h3>
+                ) : (
+                <div>
+                    <h5> Top {movies.length} Ranked Movies </h5>
 
-            <h5> # Top Ranked Movies </h5>
-
-            { top3.map( ele => { return <p key={ele.id} > - {ele.movie} </p> }) }
+                    <table className='table rounded'>
+                        <thead>
+                            <tr>
+                                <th> # </th>
+                                <th> Name </th>
+                                <th> IMDb Rating </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            { top3.map( (ele, i) => { 
+                                return <tr key={ele.id} > 
+                                    <td> { i + 1 } </td> 
+                                    <td> {ele.movie} </td>
+                                    <td> <BsFillStarFill color="orange" > </BsFillStarFill> {ele.ranking}  </td>
+                                </tr> }) }
+                        </tbody>
+                    </table>
+                </div>)
+            }
   
         </div>
     )
