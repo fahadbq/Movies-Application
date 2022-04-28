@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { removeMovie } from '../../reduxFiles/actions/moviesAction'
 
 import pic3 from '../../Assets/pic3.jpg'
+import doctorStrangeImage from '../../Assets/doctor-strange.webp'
 
 const MovieCard = (props) =>{
     const [ image, setImage ] = useState(null)
@@ -64,15 +65,13 @@ const MovieCard = (props) =>{
                         </div> */}
 
                         <div className="card mt-2 p-2 bd-highlight border shadow rounded" style={{ width: '16rem' }} >
-                                   <img className="card-img-left pt-2" src={pic3} alt='img'/>
+                                   <img className="card-img-left pt-2" src={doctorStrangeImage} alt='img'/>
                                     <div className="card-body">
                                         <h4 className="card-title">Name : { movie }</h4>
                                         <h5 className="card-title">Ranking : #{ ranking}</h5>
                                         <button onClick={()=>{handleRemove(id)}} style={{border:'none',background:'none', display:'inline-block', float: 'right'}}><img src='https://www.pngall.com/wp-content/uploads/5/Delete-Bin-Trash-PNG-Clipart.png' alt='delete' style={{width:'2rem'}}/></button>
                                     </div>
                             </div>
-                        
-                        
         </div>
     )
 }
