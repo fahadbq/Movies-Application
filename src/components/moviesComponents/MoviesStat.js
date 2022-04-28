@@ -25,18 +25,19 @@ const MoviesStat = (props) =>{
                     <table className='table rounded'>
                         <thead>
                             <tr>
-                                <th> # </th>
-                                <th> Name </th>
-                                <th> IMDb Rating </th>
+                                <td> # </td>
+                                <td> Name </td>
+                                <td> IMDb Rating </td>
                             </tr>
                         </thead>
                         <tbody>
                             { top3.map( (ele, i) => { 
                                 return <tr key={ele.id} > 
                                     <td> { i + 1 } </td> 
-                                    <td> {ele.movie} </td>
+                                    <td> <small> {ele.movie} </small> </td>
                                     <td> <BsFillStarFill color="orange" > </BsFillStarFill> {ele.ranking}  </td>
-                                </tr> }) }
+                                </tr> }) 
+                            }
                         </tbody>
                     </table>
                 </div>)
