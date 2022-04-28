@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { removeMovie } from '../../reduxFiles/actions/moviesAction'
 
-import pic3 from '../../Assets/pic3.jpg'
 import doctorStrangeImage from '../../Assets/doctor-strange.webp'
 
 const MovieCard = (props) =>{
@@ -18,12 +17,6 @@ const MovieCard = (props) =>{
             if(confirm){
                 dispatch(removeMovie(id))
             }
-    }
-
-    //Img handler func
-    const handleImgChange= (e) =>{
-        const selectedFiles = e.target.files[0]
-        setImage(URL.createObjectURL(selectedFiles))
     }
 
     return (
