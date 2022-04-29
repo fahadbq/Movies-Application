@@ -2,18 +2,12 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addFormData } from '../../reduxFiles/actions/moviesAction'
 
-import doctorStrangeImage from '../../Assets/doctor-strange.webp'
-import spiderMan from '../../Assets/Spider-man.jpg'
-
 const MoviesForm = (props) =>{
 
     const dispatch = useDispatch()
 
     const [ movieName, setMovieName ] = useState('')
     const [ ranking, setRanking ] = useState ('')
-
-    //Movies Posters
-    const posters = [ doctorStrangeImage, spiderMan]
 
     const handleChage =(e) =>{
         const readInput = e.target.name

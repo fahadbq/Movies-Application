@@ -3,10 +3,17 @@ import { removeMovie } from '../../reduxFiles/actions/moviesAction'
 
 import swal from 'sweetalert';
 import { MdDelete } from "react-icons/md";
-import doctorStrangeImage from '../../Assets/doctor-strange.webp'
-//import spiderMan from '../../Assets/Spider-man.jpg'
+
+//Posters
+import defaultImage from '../../Assets/defaultImage.jpg'
+import Inception from '../../Assets/Inception.jpg'
+import Interstellar from '../../Assets/Interstellar.jpg'
+import DoctorStrange from '../../Assets/DoctorStrange.jpg'
+import SpiderMan from '../../Assets/Spider-man.jpg'
+import Matrix from '../../Assets/Matrix.png'
 
 const MovieCard = (props) => {
+    const posters = [Inception, Interstellar, DoctorStrange, SpiderMan, Matrix]
 
     const dispatch = useDispatch()
     
@@ -33,16 +40,15 @@ const MovieCard = (props) => {
           });
     }
 
-
     return (
-        <div className="card-group" style={{width: "15rem", height: "400px" }} >
+        <div className="card-group g-4" style={{width: "14.5rem" }}>
             <div className='card'>
-            <img src={doctorStrangeImage} className="card-img-top" alt="Movies poster" />
+            <img src={ posters.find(ele => ele.slice(14, 20) === movie.slice(0, 6)) || defaultImage } className="card-img-top w-60" alt="Movies poster" /> {/* Finding right poster to display or display defaultImage */}
             <div className="card-body" style={{ backgroundColor: "#232F3E" }} >
                 <h6 className="card-title" style={{color: "#f2f2f4"}} > Name: { movie } </h6>
                 <div className="card-text" style={{color: "#f2f2f4"}} > <small> Ranking: { ranking } </small> </div>
                 <button onClick={()=>{handleRemove(id)}}
-                    style={{border:'none',background:'none', display:'inline-block', float: 'right'}}> <MdDelete size="1.5em" color="#f2f2f4" /> </button>
+                    style={{border:'none',background:'none', display:'inline-block', float: 'right'}}> <MdDelete size="1.3em" color="#f2f2f4" /> </button>
             </div>
             </div>
         </div>
