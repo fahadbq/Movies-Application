@@ -40,10 +40,15 @@ const MovieCard = (props) => {
           });
     }
 
+    const findPoster = () => {
+      // Finding right poster to display or display defaultImage
+      return posters.find(ele => ele.toLowerCase().slice(14, 20) === movie.toLowerCase().slice(0, 6)) || defaultImage
+    }
+
     return (
         <div className="card-group g-4" style={{width: "14.5rem" }}>
             <div className='card'>
-            <img src={ posters.find(ele => ele.slice(14, 20) === movie.slice(0, 6)) || defaultImage } className="card-img-top w-60" alt="Movies poster" /> {/* Finding right poster to display or display defaultImage */}
+            <img src={ findPoster() } className="card-img-top" alt="Movies poster" />
             <div className="card-body" style={{ backgroundColor: "#232F3E" }} >
                 <h6 className="card-title" style={{color: "#f2f2f4"}} > Name: { movie } </h6>
                 <div className="card-text" style={{color: "#f2f2f4"}} > <small> Ranking: { ranking } </small> </div>
