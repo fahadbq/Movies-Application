@@ -18,7 +18,7 @@ const MoviesStat = (props) =>{
                 (<h3 style={{fontFamily: "monospace", color: "#37475A" }} > No data found, add movies to show top movies. </h3>
                 ) : (
                 <div>
-                    <h5> Top {movies.length} Ranked Movies </h5>
+                    <h5> Top 3 Ranked Movies </h5>
 
                     <table className='table rounded'>
                         <thead>
