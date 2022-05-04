@@ -3,6 +3,7 @@ import { removeMovie } from '../../reduxFiles/actions/moviesAction'
 
 import swal from 'sweetalert';
 import { MdDelete } from "react-icons/md";
+import { BsFillStarFill } from "react-icons/bs";
 
 //Posters
 import defaultImage from '../../Assets/defaultImage.jpg'
@@ -51,7 +52,7 @@ const MovieCard = (props) => {
             <img src={ findPoster() } className="card-img-top" alt="Movies poster" />
             <div className="card-body" style={{ backgroundColor: "#232F3E" }} >
                 <h6 className="card-title" style={{color: "#f2f2f4"}} > Name: { movie } </h6>
-                <div className="card-text" style={{color: "#f2f2f4"}} > <small> Ranking: { ranking } </small> </div>
+                <div className="card-text" style={{color: "#f2f2f4"}} > <h6> IMDb: <BsFillStarFill color="orange" > </BsFillStarFill> { ranking } </h6> </div>
                 <button onClick={()=>{handleRemove(id)}}
                     style={{border:'none',background:'none', display:'inline-block', float: 'right'}}> <MdDelete size="1.3em" color="#f2f2f4" /> </button>
             </div>
