@@ -12,7 +12,7 @@ const MoviesStat = (props) =>{
     const top3 = [ ...movies.sort((a, b) =>{ return b.ranking - a.ranking }).slice(0, 3) ] // show only recent 3 id's 
 
     return (
-        <div className="border shadow p-3 mb-5 bg-body rounded" style={{ position: "fixed", width: "300px", right: "150px", bottom: "70px"}} >
+        <div className="border shadow p-3 mb-5 bg-body rounded" style={{ position: "absolute", width: "300px", right: "190px", top: "400px"}} >
 
             { movies.length === 0 ? 
                 (<h3 style={{fontFamily: "monospace", color: "#37475A" }} > No data found, add movies to show top movies. </h3>

@@ -47,7 +47,7 @@ const MovieCard = (props) => {
     }
 
     return (
-        <div className="card-group g-4" style={{width: "14.5rem" }}>
+        <div className="card-group g-4 bg-body rounded" style={{width: "14rem" }}>
             <div className='card'>
             <img src={ findPoster() } className="card-img-top" alt="Movies poster" />
             <div className="card-body" style={{ backgroundColor: "#232F3E" }} >

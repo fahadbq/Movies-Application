@@ -9,9 +9,9 @@ const MoviesContainer = (props) =>{
     
     return (
         
-        <div className='container' style={{ position: 'fixed', width: "1000px", left: "50px", top: "10px" }}>
+        <div style={{ position: 'relative', left: "30px", top: "20px" }}>
 
-            <h2 style={{fontFamily:"monospace", color: "#37475A" }} > Movies Rating list </h2> <br />
+            <h2 style={{position: 'relative', left: "30px", fontFamily:"monospace", color: "#37475A" }} > Movies Rating list </h2> <br />
             
             <MovieList />
                 

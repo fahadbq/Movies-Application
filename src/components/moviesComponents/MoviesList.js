@@ -15,7 +15,7 @@ const MovieList = (props) =>{
     }, [moviesData])
 
     return (
-        <div className="container row pt-2" >
+        <div className="container row pt-2" style={{ position: 'relative', width: "1000px", left: "30px", top: "20px" }} >
 
             < Search setCloneData={setCloneData} originalData={moviesData} />
 

@@ -56,7 +56,7 @@ const Search = (props) =>{
     }
 
     return (
-        <div className="row col-12">
+        <div className=" row col-12" style={{ position: 'relative', width: "900px", top: '0px' }} >
             <form className="input-group input-group-sm mb-3" aria-label="Text input with dropdown button" > 
 
                 <input type='text' 
