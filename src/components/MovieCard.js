@@ -1,17 +1,17 @@
 import { useDispatch } from 'react-redux'
-import { removeMovie } from '../../reduxFiles/actions/moviesAction'
+import { removeMovie } from '../reduxFiles/actions/moviesAction'
 
 import swal from 'sweetalert';
 import { MdDelete } from "react-icons/md";
 import { BsFillStarFill } from "react-icons/bs";
 
 //Posters
-import defaultImage from '../../Assets/defaultImage.jpg'
-import Inception from '../../Assets/Inception.jpg'
-import Interstellar from '../../Assets/Interstellar.jpg'
-import DoctorStrange from '../../Assets/DoctorStrange.jpg'
-import SpiderMan from '../../Assets/Spider-man.jpg'
-import Matrix from '../../Assets/Matrix.png'
+import defaultImage from '../Assets/defaultImage.jpg'
+import Inception from './../Assets/Inception.jpg'
+import Interstellar from '../Assets/Interstellar.jpg'
+import DoctorStrange from '../Assets/DoctorStrange.jpg'
+import SpiderMan from '../Assets/Spider-man.jpg'
+import Matrix from '../Assets/Matrix.png'
 
 const MovieCard = (props) => {
     const posters = [Inception, Interstellar, DoctorStrange, SpiderMan, Matrix]

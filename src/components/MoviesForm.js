@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addFormData } from '../../reduxFiles/actions/moviesAction'
+import { addFormData } from '../reduxFiles/actions/moviesAction'
 
 const MoviesForm = (props) =>{
 
